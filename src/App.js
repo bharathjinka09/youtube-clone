@@ -8,6 +8,7 @@ function App() {
   	<div className="app">
 	  	<Container>
 		  <Form>
+		  <br />
 	  		<Form.Row>
 			    <Col>
 		    	  <Form.Control size="lg" type="text" placeholder="Search" />
