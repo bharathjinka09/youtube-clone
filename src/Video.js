@@ -12,7 +12,6 @@ export default ({ searchString }) => {
 	const [videoList, setVideoList] = useState([])
 	const [selectedVideo, setSelectedVideo] = useState({})
 
-
 	useEffect(() => {
 		callApi();
 	},[searchString])
@@ -37,7 +36,12 @@ export default ({ searchString }) => {
 			</Col>
 	    	<Col xs={12} lg={4}>
 	    		<ListGroup>
-	    			<Suggestions videoList={videoList} changeSelection={selectedVideoCallback} />
+	    		    <p>Suggestions</p>
+	    			<Suggestions 
+		    			videoList={videoList} 
+		    			changeSelection={selectedVideoCallback} 
+		    			selectedVideoId={selectedVideo.id}
+	    			/>
 	    		</ListGroup>
 	    	</Col>
 		</>

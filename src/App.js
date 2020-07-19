@@ -2,6 +2,7 @@ import React,{ useState } from 'react';
 import './App.css';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 import Video from './Video'
+import Footer from './Footer'
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('')
@@ -25,7 +26,7 @@ function App() {
 			        style={{ margin: 'auto' }}
 			      />
 			    </Col>
-			    <Col md={7} xs={9}>
+			    <Col md={5} xs={8}>
 		    	  <Form.Control 
 			    	  size="lg" 
 			    	  type="text" 
@@ -47,6 +48,9 @@ function App() {
 		  </Form>
 		  <Row>
 		  	<Video searchString={passToChild}/>
+		  </Row>
+		  <Row>
+		  	<Footer />
 		  </Row>
 		</Container>
 	</div>

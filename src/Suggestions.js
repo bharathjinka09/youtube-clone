@@ -2,7 +2,7 @@ import React from 'react'
 import { ListGroup } from 'react-bootstrap'
 
 
-export default ({videoList,changeSelection}) => {
+export default ({videoList,changeSelection, selectedVideoId}) => {
 
 	const changeSelectedVideo = (data) => {
 		changeSelection(data)
@@ -12,7 +12,9 @@ export default ({videoList,changeSelection}) => {
 		<>
 			{videoList.length > 0 ? 
 				videoList.map(data => 
-				 <ListGroup.Item onClick={() => changeSelectedVideo(data)}> 
+				 <ListGroup.Item
+				    key={data.id} 
+				    onClick={() => changeSelectedVideo(data)} style={{cursor:'pointer'}}> 
 					<div
 					style={{ marginBottom:10,padding:10,display: 'flex' }} >
 					<div>
