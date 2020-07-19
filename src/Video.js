@@ -22,10 +22,10 @@ export default ({ searchString }) => {
 			console.log(result);
 			setSelectedVideo(result[0])
 			setVideoList(result)
-	};
+	}
 
 	const selectedVideoCallback = (videoDetail) => {
-		
+		setSelectedVideo(videoDetail)
 	}
 
 	return (
@@ -37,7 +37,7 @@ export default ({ searchString }) => {
 			</Col>
 	    	<Col xs={12} lg={4}>
 	    		<ListGroup>
-	    			<Suggestions videoList={videoList} />
+	    			<Suggestions videoList={videoList} changeSelection={selectedVideoCallback} />
 	    		</ListGroup>
 	    	</Col>
 		</>

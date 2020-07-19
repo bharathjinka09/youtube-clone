@@ -3,3 +3,20 @@
   background: black;
   color: white;
 }
+
+.sugg-title{
+	font-size: 14px;
+	font-weight: 500; 
+}
+
+.sugg-channel{
+	font-size: 12px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: 700;
+	color: gray;
+}
+
+.search-box{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}

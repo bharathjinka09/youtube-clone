@@ -16,14 +16,22 @@ function App() {
   	<div className="app">
 	  	<Container>
 		  <Form onSubmit={event => onSubmit(event)}>
-		  <br />
-	  		<Form.Row>
-			    <Col>
+	  		<Form.Row className='search-box'>
+			    <Col xs={12} md={2} style={{ margin:'auto' }}>
+			      <img 
+			        src="https://www.freeiconspng.com/uploads/youtube-logo-png-picture-2.png"
+			        alt='logo'
+			        width="100px"
+			        style={{ margin: 'auto' }}
+			      />
+			    </Col>
+			    <Col md={7} xs={9}>
 		    	  <Form.Control 
-		    	  size="lg" 
-		    	  type="text" 
-		    	  placeholder="Search"
-		    	  onChange={event => setSearchTerm(event.target.value)} 
+			    	  size="lg" 
+			    	  type="text" 
+			    	  placeholder="Search"
+			    	  onChange={event => setSearchTerm(event.target.value)} 
+			    	  style={{ flex: 1 }}
 		    	/>
 			    </Col>
 			    <Col>
